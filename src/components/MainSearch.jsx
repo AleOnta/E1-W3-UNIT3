@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Container, Row, Col, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import Job from "./Job";
 
 const MainSearch = () => {

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { BsFillTrashFill } from "react-icons/bs";
 import JobModal from "./JobModal";
+import { removeFavouriteCompany } from "../redux/actions";
 
 const FavouritesCompany = () => {
   const favourites = useSelector((state) => state.favourites.favCompany);
@@ -26,10 +27,7 @@ const FavouritesCompany = () => {
                       variant="danger"
                       className="ml-2"
                       onClick={() => {
-                        dispatch({
-                          type: "REMOVE_FROM_FAVOURITES",
-                          payload: i,
-                        });
+                        dispatch(removeFavouriteCompany(i));
                       }}
                     >
                       <BsFillTrashFill />
