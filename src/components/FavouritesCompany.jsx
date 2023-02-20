@@ -6,7 +6,7 @@ import JobModal from "./JobModal";
 import { removeFavouriteCompany } from "../redux/actions";
 
 const FavouritesCompany = () => {
-  const favourites = useSelector((state) => state.favourites.favCompany);
+  const favourites = useSelector((state) => state.favourites.saved);
   const dispatch = useDispatch();
   return (
     <Container className="mt-5">
