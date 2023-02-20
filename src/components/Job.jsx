@@ -2,7 +2,7 @@ import { Row, Col, Button } from "react-bootstrap";
 import { BsFillBookmarkHeartFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { addFavouriteCompany } from "../redux/actions";
+import { addFavouriteCompanyAction } from "../redux/actions";
 
 const Job = ({ data }) => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ const Job = ({ data }) => {
           variant="primary"
           className="ml-3 d-flex justify-content-center align-items-center"
           onClick={() => {
-            dispatch(addFavouriteCompany(data));
+            dispatch(addFavouriteCompanyAction(data));
           }}
         >
           <BsFillBookmarkHeartFill />

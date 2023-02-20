@@ -1,7 +1,7 @@
 // actions for query reducer:
 export const ADD_QUERY_RESULT = "ADD_QUERY_RESULT";
 
-export const jobFetcher = (e, endpoint, query) => {
+export const jobFetcherAction = (e, endpoint, query) => {
   e.preventDefault();
   return async (dispatch) => {
     try {
@@ -26,12 +26,12 @@ export const jobFetcher = (e, endpoint, query) => {
 export const ADD_TO_FAVOURITES = "ADD_TO_FAVOURITES";
 export const REMOVE_FROM_FAVOURITES = "REMOVE_FROM_FAVOURITES";
 
-export const addFavouriteCompany = (data) => ({
+export const addFavouriteCompanyAction = (data) => ({
   type: ADD_TO_FAVOURITES,
   payload: data,
 });
 
-export const removeFavouriteCompany = (index) => ({
+export const removeFavouriteCompanyAction = (index) => ({
   type: REMOVE_FROM_FAVOURITES,
   payload: index,
 });

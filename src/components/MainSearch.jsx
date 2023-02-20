@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Container, Row, Col, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { jobFetcher } from "../redux/actions";
+import { jobFetcherAction } from "../redux/actions";
 import Job from "./Job";
 
 const MainSearch = () => {
@@ -24,7 +24,7 @@ const MainSearch = () => {
         <Col xs={10} className="mx-auto">
           <Form
             onSubmit={(e) => {
-              dispatch(jobFetcher(e, baseEndpoint, query));
+              dispatch(jobFetcherAction(e, baseEndpoint, query));
             }}
           >
             <Form.Control type="search" value={query} onChange={handleChange} placeholder="type and press Enter" />
